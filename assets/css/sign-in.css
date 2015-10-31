@@ -1,0 +1,123 @@
+body,html {
+    height: 100%;
+}
+html {
+    background-color: #2f71a2;
+}
+body {
+    font-size: 14px;
+    /* Old browsers */
+    background: #327ab2;
+    /* IE10+ */
+    background: -ms-linear-gradient(top, #327ab2 0%, #2c73a8 21%, #135781 75%, #0c4f76 100%);
+    /* W3C */
+    background: linear-gradient(to bottom, #327ab2 0%, #2c73a8 21%, #135781 75%, #0c4f76 100%);
+     /* IE6-9 */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#327ab2', endColorstr='#0c4f76', GradientType=0);
+}
+#content {
+    min-height: 100px;
+    min-width: 100px;
+}
+.logo {
+    padding: 15px 0 7px 7px;
+}
+.footer {
+    font-size: 11px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.form {
+    margin: auto;
+    width: 550px;
+}
+.form input[type="text"],.form input[type="password"] {
+    background-color: #EEF8FB;
+    border-bottom: 1px solid #CCCCCC;
+    border-radius: 3px;
+    border-right: 1px solid #CCCCCC;
+    font-size: 1em;
+    outline: medium none;
+    width: 200px;
+}
+.overAllBox {
+    padding: 15px 0 0 0;
+}
+.overAllBox div {
+    text-align: center;
+    padding: 0 0 7px;
+}
+.overAllBox label {
+    display: inline-block;
+    width: 75px;
+}
+.overAllBox label.email {
+    width: 40px;
+}
+.overAllBox p {
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+div.error {
+    color: red;
+    display: none;
+    font-style: italic;
+    padding: 0 0 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+#box {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px #333;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 20px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-65%);
+    width: 700px;
+}
+#browserMsg {
+    background-color: #fffa72;
+    border-bottom: 1px solid #ccc;
+    display: none;
+    height: 30px;
+    left: 0;
+    padding-top: 7px;
+    padding: 0;
+    position: absolute;
+    top: -100px;
+    width: 104%;
+}
+.submit {
+    display: block;
+    margin: 7px auto 10px;
+    width: 150px;
+}
+.confirmation {
+    padding: 25px 0;
+}
+.confirmation p {
+    line-height: 21px
+}
+.signin-inputs {
+    width: 500px;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+.browsehappy {
+    background: #fffa72;
+    color: #000;
+    font-size: 1.1em;
+    left: 0;
+    padding: 0.4em 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}

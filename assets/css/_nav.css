@@ -1,0 +1,294 @@
+/** Logo and Account Nav **/
+#header{
+    
+    box-sizing: content-box !important;
+    /* min-width breaking jjmenu */
+    /*min-width: 1160px; */ /*1170px;*/
+}
+#header div {
+    width: 45%;
+    float: left;
+    padding: 7px 11px 7px 25px;
+    box-sizing: content-box !important;
+}
+
+#header div + div {
+    float: right;
+    text-align: right;
+    padding: 0px 15px 0 0;
+    font-size: 1.1em;
+    height: 1.1em;
+    margin-top: -8px;
+    box-sizing: content-box !important;
+}
+
+#logo {
+    cursor: pointer;
+    box-sizing: content-box !important;
+    margin: 0;
+    padding:0;
+    margin-bottom: -2px;
+}
+
+#header span {
+    float: right;
+    display: block;
+    box-sizing: content-box !important;
+}
+
+#header a:hover {
+    text-decoration: none;
+}
+
+
+/* nav main item layout */
+#li-account {
+	width: 72px;
+	text-align: center;
+}
+
+#li-support {
+	width: 65px;
+	text-align: center;
+}
+
+#li-logout {
+	width: 62px;
+}
+
+/***************************
+ account-menu
+ ****************************/
+#account-menu {
+    box-sizing: content-box !important;
+    z-index: 2000;
+    display: block;
+
+}
+
+#account-menu > li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 2000;
+}
+
+#account-menu li {
+    padding: 4px 5px 0 7px;
+    border: 1px solid #fff;
+    border-left: 1px dotted #5b5959;
+}
+
+#account-menu li:first-child {
+    border: none;
+    padding-top: 5px;
+}
+
+
+
+#accountDiv a:hover {
+    color: #fff;
+    border-bottom: 1px solid #3078ae;
+}
+
+#date {
+    padding:  5px 7px 0 0;
+    text-align: right;
+    box-sizing: content-box !important;
+    margin: 0;
+
+}
+
+/** Primary Nav and Rollovers **/
+#nav {
+    background-color: #3078ae;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-sizing: content-box !important;
+    display: block;
+    height: 29px;
+    margin: 0;
+    min-width: 1130px; /*1170px;*/
+    position: relative;
+    /*z-index: 1000;*/
+}
+
+#nav > li {
+    height: 100%;
+    float: left;
+    position: relative;
+    list-style: none;
+    color: #fff;
+    font-size: 1.5em;
+    border-right: 1px solid #fff;
+    font-weight: bold;
+}
+
+#nav > li:first-child {
+    border-left: 1px solid #fff;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 25px 0;
+    display: block;
+    height: 24px;
+    text-shadow: 1px 1px 1px #343434;
+    line-height: 1.3em;
+}
+
+#nav .firstChild {
+    margin-left: 71px;
+}
+
+#nav > li > a:hover {
+    background: #1d659b;
+    border-bottom: none;
+}
+
+/** Secondary Nav Rollovers **/
+#nav div {
+    display: none;
+    margin: 12px 0 0 -1em;
+    padding: 0px;
+    background-color: #fff;
+    font-size: .75em;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    position: absolute;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 3px 3px 4px #999;
+    -webkit-box-shadow: 3px 3px 4px #999;
+    box-shadow: 3px 3px 4px #999;
+    z-index: 2222;
+}
+
+#nav > li > div > ul {
+    display: block;
+    float: left;
+    margin: 7px 20px;
+    padding: 0;
+}
+
+#nav > li > div > ul > li {
+    padding: 7px 0;
+}
+
+#nav > li > div > img {
+    display: block;
+    margin: -7px auto 0;
+}
+
+.pulldown {
+    padding-left: 4px;
+}
+
+/**********************
+ Footer
+ **********************/
+#footer {
+    width: 300px;
+    font-size: .95em;
+    margin: 17px auto 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-align: center;
+    color: #acacac;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+    list-style: none;
+    width: 375px;
+
+}
+
+#footer a {
+    white-space: nowrap;
+}
+
+#footer li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#footer li {
+    border-left: 1px dotted #949191;
+    padding: 0 5px 0 7px;
+}
+
+#footer li:first-child {
+    border: none;
+}
+/*************************
+JJ Menu - context Menu
+**************************/
+.contextMenu {
+    background: url("/assets/img/icon-pulldown-blue.png") no-repeat scroll right center #fff;
+    padding-right: 12px;
+}
+div.jjmenu {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 5px;
+    border-radius:3px;
+    margin-top:0px;
+    margin-left:-2px;
+    -moz-box-shadow: 3px 4px 2px #595959;
+    -webkit-box-shadow: 3px 4px 2px #595959;
+    box-shadow: 3px 4px 2px #595959;
+    /* For IE 8 */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#595959')";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#595959');
+    z-index:999999999;
+}
+div.jj_menu_item {
+    color: #034b92;
+    background: #fff;
+    cursor: pointer;
+    padding:0px 5px;
+    font-weight:bold;
+}
+div.jj_menu_item:hover {
+    background:#3078ae;
+    cursor:pointer;
+    border-radius:2px;
+    color:#fff;
+}
+div.jj_menu_item span {
+    display: block;
+    padding: 4px 4px 5px 4px;
+}
+#li-account, #li-support {
+    box-sizing: content-box !important;
+}
+/*************************
+Navigation Helpers
+**************************/
+.center {
+    text-align: center;
+}
+.clearall {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 1px;
+    margin: 0;
+    padding: 0;
+}
+.small {
+    font-size: .95em;
+}
+

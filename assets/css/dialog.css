@@ -1,0 +1,500 @@
+/*-------------------------*/
+
+/* Dialog Alert/Confirm    */
+
+/* - uses Jquery UI        */
+
+/*-------------------------*/
+ .ui-widget-overlay {
+    background: transparent;
+}
+.ui-dialog {
+    -moz-box-shadow: 0px 3px 7px #999;
+    -webkit-box-shadow: 0px 3px 7px #999;
+    box-shadow: 0px 3px 7px #999;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    margin:auto;
+}
+.ui-dialog .ui-dialog-title {
+    font-size: 20px !important;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    background: #efefef !important;
+    border-radius: 0 0 6px 6px;
+    border: none;
+    border-top: 1px solid #DDDDDD !important;
+    box-shadow: inset 0 1px 0 #FFF;
+    color:#fff;
+    display: block;
+    padding: 14px 15px 15px !important;
+    text-align: center;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: none;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+    float: none;
+    width: 111px;
+}
+/* Added by Jake to make dialog look like the custom alertify */
+ .ui-dialog {
+    padding: 0;
+    border-radius: 6px 6px 6px 6px;
+}
+
+/* 
+    We want the close button on the corner 
+    This can create some problems if there are callback functions
+    on the closing of any dialog
+*/
+/*
+.ui-button-text, .ui-button-icon-primary, .ui-button-icon-only {
+    display: none;
+}
+*/
+.ui-dialog .ui-dialog-titlebar-close {
+    display: inline-block;
+    margin: -10px 5px 0 0;
+}
+.ui-dialog .ui-dialog-titlebar-close .ui-button-icon-primary{
+    display: inline-block;
+}
+.ui-dialog .ui-dialog-titlebar {
+    background-image: none;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 15px 0 !important;
+    font-size: 15px !important;
+}
+.ui-dialog .ui-dialog-content {
+    padding: 7px 15px;
+}
+.ui-dialog .ui-dialog-content br {
+    padding-top:5px;
+}
+.ui-dialog-buttonset .ui-button {
+    background: -ms-linear-gradient(top, #f7f7f7 0%, #f2f2f2 3%, #f1f1f1 7%, #ececec 30%, #ebebeb 47%, #dcdcdc 53%, #dadada 73%, #d1d1d1 100%);
+    background: -o-linear-gradient(top, #f7f7f7 0%, #f2f2f2 3%, #f1f1f1 7%, #ececec 30%, #ebebeb 47%, #dcdcdc 53%, #dadada 73%, #d1d1d1 100%);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f7f7f7), color-stop(0.03, #f2f2f2), color-stop(0.07, #f1f1f1), color-stop(0.3, #ececec), color-stop(0.47, #ebebeb), color-stop(0.53, #dcdcdc), color-stop(0.73, #dadada), to(#d1d1d1));
+    background: -webkit-linear-gradient(top, #f7f7f7 0%, #f2f2f2 3%, #f1f1f1 7%, #ececec 30%, #ebebeb 47%, #dcdcdc 53%, #dadada 73%, #d1d1d1 100%);
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #f2f2f2 3%, #f1f1f1 7%, #ececec 30%, #ebebeb 47%, #dcdcdc 53%, #dadada 73%, #d1d1d1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#d1d1d1', GradientType=0);
+    background: linear-gradient(to bottom, #f7f7f7 0%, #f2f2f2 3%, #f1f1f1 7%, #ececec 30%, #ebebeb 47%, #dcdcdc 53%, #dadada 73%, #d1d1d1 100%);
+    border: 1px solid #3c7fb1;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    margin-top: 0;
+    width: 120px !important;
+    line-height: 35px !important;
+}
+.ui-dialog-buttonset .ui-button:hover {
+    color: #000;
+    font-size: 14px;
+    border: 1px solid #3c7fb1;
+    background: -moz-linear-gradient(top, #e9f6fd 0%, #e9f6fd 47%, #bce4fa 50%, #bce4fa 100%);
+    background: -ms-linear-gradient(top, #e9f6fd 0%, #e9f6fd 47%, #bce4fa 50%, #bce4fa 100%);
+    background: -o-linear-gradient(top, #e9f6fd 0%, #e9f6fd 47%, #bce4fa 50%, #bce4fa 100%);
+    background: -webkit-linear-gradient(top, #e9f6fd 0%, #e9f6fd 47%, #bce4fa 50%, #bce4fa 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9f6fd', endColorstr='#bce4fa', GradientType=0);
+    background: linear-gradient(to bottom, #e9f6fd 0%, #e9f6fd 47%, #bce4fa 50%, #bce4fa 100%);
+    line-height: 35px;
+}
+.ui-button-text {
+    font-size: 14px;
+    white-space: nowrap;
+    margin:0 !important;
+    padding: 0 !important;
+}
+.dialog-alert, .dialog-confirm {
+    z-index: 99979;
+    font-size: 15px;
+}
+.ui-dialog-buttonset .ui-button {
+    border: 1px solid #3C7FB1;
+    border-radius: 3px 3px 3px 3px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 40px !important;
+    margin: 0 0 0 10px !important;
+    width: 120px;
+}
+/*-------------------------*/
+
+/* Fade Animations for     */
+
+/* alert and confirm       */
+
+/*-------------------------*/
+ .dialog-fade-in {
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+.dialog-fade-out {
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+/*-------------------------*/
+
+/* Dialog Alert            */
+
+/*-------------------------*/
+ .dialog-alert-icon {
+    background: url("/assets/img/dialog-alert-icon.png") no-repeat scroll left 1px transparent;
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+/*-------------------------*/
+
+/* Dialog Confirm          */
+
+/*-------------------------*/
+ .dialog-confirm textarea {
+    font-family:"Courier New", Courier, monospace;
+    font-size: 13px;
+}
+.dialog-confirm a {
+    color: #034B92;
+    cursor: pointer;
+}
+.dialog-confirm-icon {
+    background: url("/assets/img/dialog-confirm-icon.png") no-repeat scroll left 1px transparent;
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+/*-------------------------*/
+
+/*  Dialog Saving         */
+
+/*  CSS3 Loading Animation */
+
+/*-------------------------*/
+ .dialog-save {
+    border: 1px solid #999999;
+    border-radius: 0 0 4px 4px;
+    font-family: Arial, helvetica, sans-serif;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-style: italic;
+    font-weight: bold;
+    background-color: #fff;
+    opacity: 0.9;
+    text-align: center;
+    width: 300px;
+    padding: 0.5em 0;
+    box-shadow: 3px 3px 4px #999999;
+    position: fixed;
+    top: -75px;
+    left: 50%;
+    margin-left: -150px;
+    /* half the width */
+    z-index: 99988;
+}
+.dialog-save-inner {
+    line-height: 18px;
+}
+.dialog-save-inner span {
+    display: block;
+}
+.dialog-save-inner div {
+    line-height: 12px;
+    min-height: 12px;
+}
+.dialog-save-inner div img {
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+}
+.dialog-save-cover {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99987;
+    background-color: transparent;
+}
+.dialog-save-icon {
+    background: url(/assets/img/icon-enabled-true.png) 0 center no-repeat;
+    display: inline-block;
+    height:17px;
+    margin-left:5px;
+    overflow: hidden;
+    width:16px;
+    font-family: arial, helvetica, sans-serif;
+    vertical-align: -2px;
+}
+.dialog-save-in {
+    -webkit-transition: top 0.2s ease;
+    -moz-transition: top 0.2s ease;
+    -ms-transition: top 0.2s ease;
+    -o-transition: top 0.2s ease;
+    transition: top 0.2s ease;
+    top:-1px;
+}
+.dialog-save-out {
+    -webkit-transition: top 0.3s ease;
+    -moz-transition: top 0.3s ease;
+    -ms-transition: top 0.3s ease;
+    -o-transition: top 0.3s ease;
+    transition: top 0.3s ease;
+    top:-85px;
+}
+/*-------------------------*/
+
+/*  Dialog Loading         */
+
+/*  CSS3 Loading Animation */
+
+/*-------------------------*/
+ .dialog-load {
+    width: 400px;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 11px;
+    box-shadow: 3px 3px 4px #999999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    /* approx half the height */
+    margin-left: -200px;
+    /* half the width */
+    z-index: 99998;
+}
+.dialog-load-inner {
+    padding: 7px;
+    font-size: 1.1em;
+    font-style: italic;
+}
+.dialog-load-cover {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99997;
+    background-color: transparent;
+}
+/* Spinner CSS3 animation for load */
+ #floatingBarsG {
+    position:relative;
+    width:26px;
+    height:32px;
+    margin: 7px auto 2px;
+}
+#floatingBarsG img {
+    width: 32px;
+    height: 32px;
+}
+#ellipsis {
+    width: 15px;
+    display: inline-block;
+    text-align: left;
+    padding-left: 2px;
+    opacity: .9;
+}
+.blockG {
+    position:absolute;
+    background-color:#000000;
+    width:4px;
+    height:10px;
+    -moz-border-radius:4px 4px 0 0;
+    -moz-transform:scale(0.4);
+    -moz-animation-name:fadeG;
+    -moz-animation-duration:0.72s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:linear;
+    -webkit-border-radius:4px 4px 0 0;
+    -webkit-transform:scale(0.4);
+    -webkit-animation-name:fadeG;
+    -webkit-animation-duration:0.72s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:linear;
+    -ms-border-radius:4px 4px 0 0;
+    -ms-transform:scale(0.4);
+    -ms-animation-name:fadeG;
+    -ms-animation-duration:0.72s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-direction:linear;
+    border-radius:4px 4px 0 0;
+    transform:scale(0.4);
+    animation-name:fadeG;
+    animation-duration:0.72s;
+    animation-iteration-count:infinite;
+    animation-direction:linear;
+}
+#rotateG_01 {
+    left:0;
+    top:12px;
+    -moz-animation-delay:0.27s;
+    -moz-transform:rotate(-90deg);
+    -webkit-animation-delay:0.27s;
+    -webkit-transform:rotate(-90deg);
+    -ms-animation-delay:0.27s;
+    -ms-transform:rotate(-90deg);
+    animation-delay:0.27s;
+    transform:rotate(-90deg);
+}
+#rotateG_02 {
+    left:3px;
+    top:4px;
+    -moz-animation-delay:0.36s;
+    -moz-transform:rotate(-45deg);
+    -webkit-animation-delay:0.36s;
+    -webkit-transform:rotate(-45deg);
+    -ms-animation-delay:0.36s;
+    -ms-transform:rotate(-45deg);
+    animation-delay:0.36s;
+    transform:rotate(-45deg);
+}
+#rotateG_03 {
+    left:11px;
+    top:1px;
+    -moz-animation-delay:0.45s;
+    -moz-transform:rotate(0deg);
+    -webkit-animation-delay:0.45s;
+    -webkit-transform:rotate(0deg);
+    -ms-animation-delay:0.45s;
+    -ms-transform:rotate(0deg);
+    animation-delay:0.45s;
+    transform:rotate(0deg);
+}
+#rotateG_04 {
+    right:3px;
+    top:4px;
+    -moz-animation-delay:0.54s;
+    -moz-transform:rotate(45deg);
+    -webkit-animation-delay:0.54s;
+    -webkit-transform:rotate(45deg);
+    -ms-animation-delay:0.54s;
+    -ms-transform:rotate(45deg);
+    animation-delay:0.54s;
+    transform:rotate(45deg);
+}
+#rotateG_05 {
+    right:0;
+    top:12px;
+    -moz-animation-delay:0.63s;
+    -moz-transform:rotate(90deg);
+    -webkit-animation-delay:0.63s;
+    -webkit-transform:rotate(90deg);
+    -ms-animation-delay:0.63s;
+    -ms-transform:rotate(90deg);
+    animation-delay:0.63s;
+    transform:rotate(90deg);
+}
+#rotateG_06 {
+    right:3px;
+    bottom:3px;
+    -moz-animation-delay:0.72s;
+    -moz-transform:rotate(135deg);
+    -webkit-animation-delay:0.72s;
+    -webkit-transform:rotate(135deg);
+    -ms-animation-delay:0.72s;
+    -ms-transform:rotate(135deg);
+    animation-delay:0.72s;
+    transform:rotate(135deg);
+}
+#rotateG_07 {
+    bottom:0;
+    left:11px;
+    -moz-animation-delay:0.8099999999999999s;
+    -moz-transform:rotate(180deg);
+    -webkit-animation-delay:0.8099999999999999s;
+    -webkit-transform:rotate(180deg);
+    -ms-animation-delay:0.8099999999999999s;
+    -ms-transform:rotate(180deg);
+    animation-delay:0.8099999999999999s;
+    transform:rotate(180deg);
+}
+#rotateG_08 {
+    left:3px;
+    bottom:3px;
+    -moz-animation-delay:0.9s;
+    -moz-transform:rotate(-135deg);
+    -webkit-animation-delay:0.9s;
+    -webkit-transform:rotate(-135deg);
+    -ms-animation-delay:0.9s;
+    -ms-transform:rotate(-135deg);
+    animation-delay:0.9s;
+    transform:rotate(-135deg);
+}
+@-moz-keyframes fadeG {
+    0% {
+        background-color:#ffffff
+    }
+    100% {
+        background-color:#000000
+    }
+}
+@-webkit-keyframes fadeG {
+    0% {
+        background-color:#ffffff
+    }
+    100% {
+        background-color:#000000
+    }
+}
+@-ms-keyframes fadeG {
+    0% {
+        background-color:#ffffff
+    }
+    100% {
+        background-color:#000000
+    }
+}
+@keyframes fadeG {
+    0% {
+        background-color:#ffffff
+    }
+    100% {
+        background-color:#000000
+    }
+}
+/*-------------------------*/
+
+/* Dialog Utility            */
+
+/*-------------------------*/
+ .dialog-util {
+    z-index: 99967;
+}
+.dialog-util textarea {
+    font-family:"Courier New", Courier, monospace;
+    font-size: 13px;
+}
+.dialog-util-icon {
+    background: url("/assets/img/dialog-util-icon.png") no-repeat scroll left 1px transparent;
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+/* Seeing some problems in ie9 on the campaign dashboard */
+.ui-dialog { margin:0;}

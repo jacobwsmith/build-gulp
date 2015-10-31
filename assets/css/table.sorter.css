@@ -1,0 +1,227 @@
+/**** CSS Table Display ****/
+table.tablesorter {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-spacing: 0;
+}
+
+.tableSorter thead tr {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 27px;
+}
+
+table.tablesorter thead tr th {
+    background: url(/assets/img/thead-bg.png) bottom right no-repeat;
+    cursor: pointer;
+    height: 27px;
+    width: 141px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 0;
+    border-top: 0;
+}
+
+table.tablesorter thead tr th:first-child {
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+    border-right: 1px solid #ccc;
+    width: 20px;
+}
+
+table.tablesorter > thead > tr th:first-child:hover {
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+}
+
+table.tablesorter > thead > tr th:hover {
+    background-image: url(/assets/img/thead-bg.png);
+    background-repeat: repeat-x;
+    background-position: top right;
+}
+
+table.tablesorter > thead > tr .headerSortUp {
+    background-image: url(/assets/img/thead-bg.png);
+    background-position: right -81px;
+}
+
+table.tablesorter > thead > tr .headerSortUp:hover {
+    background-image: url(/assets/img/thead-bg.png);
+    background-position: right -81px;
+}
+
+table.tablesorter > thead tr .headerSortDown {
+    background-image: url(/assets/img/thead-bg.png);
+    background-position: right -27px;
+}
+
+table.tablesorter > thead tr .headerSortDown:hover {
+    background-image: url(/assets/img/thead-bg.png);
+    background-position: right -27px;
+}
+
+table.tablesorter tbody tr td {
+    border-left: 1px #ccc solid;
+    padding: 3px 5px;
+    text-align: center;
+    width: 111px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 27px;
+}
+
+table.tablesorter tbody tr td img {
+    vertical-align: -2px;
+    padding-right: 3px;
+}
+
+table.tablesorter > tbody > tr > td:first-child {
+    font-weight: bold;
+    width: 25px;
+}
+
+table.tablesorter .name {
+    text-align: left !important;
+    padding-left: 7px !important;
+    width: auto !important;
+}
+
+table.tablesorter .id {
+    width: 50px;
+    text-align: center !important;
+}
+
+table.tablesorter th.headerNoSort {
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+    height: 27px;
+    border-right: 1px solid #ccc;
+}
+
+table.tablesorter th.headerNoSort:hover {
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+}
+
+table.tablesorter tfoot {
+    background-color: #e7e7e7;
+    border-top: #ff0000 1px solid;
+}
+
+table.tablesorter tfoot td {
+    padding: 3px 7px;
+}
+
+table.tablesorter tfoot td:first-child {
+    text-align: left;
+}
+
+table.tablesorter tfoot td:first-child img {
+    vertical-align: -3px;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+
+table.tablesorter tfoot a:hover {
+    text-decoration: none;
+}
+
+table.tablesorter .plus {
+    padding-right: 5px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+table.tablesorter th.action {
+    width: 165px;
+    text-align: center;
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+    border-right: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+table.tablesorter th.action:hover {
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+}
+
+table.tablesorter th.enable {
+    width: 60px;
+    text-align: center;
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+    border-right: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+table.tablesorter th.enable:hover {
+    cursor: auto;
+    background: url(/assets/img/thead-bg.png) center right no-repeat;
+}
+
+table.tableSorter > thead > tr > th {
+    border-right: 1px solid #ccc;
+    color: red;
+}
+
+.tablesorter th.tag {
+    width: 50px;
+}
+
+table.tablesorter > tbody > tr > td > h3 {
+    font-size: 1.4em;
+    margin: 30px;
+}
+table.tablesorter .name {
+	width:auto;
+}
+table.tablesorter .date {
+	width:75px;
+}
+table.tablesorter .objective {
+	width:75px;
+}
+table.tablesorter .team {
+	width:75px;
+}
+/*
+ Pager
+ */
+table.pager {
+    float: right;
+    border: none;
+}
+
+.pager {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#pager td {
+    border: none;
+	white-space:nowrap;
+	font-size:11px;
+}
+
+div.pagedisplay {
+	display:inline-block;
+	margin:0 5px;
+	height:17px
+}
+#next {
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    background-image: url(/assets/img/but-next.png);
+}
+
+#prev {
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    background-image: url(/assets/img/but-back.png);
+	vertical-align:-4px;
+}
+
+

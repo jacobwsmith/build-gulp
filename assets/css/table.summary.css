@@ -1,0 +1,45 @@
+/* Overall Performance Table */
+
+.table-summary {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table-summary tfoot img {
+    padding: 5px 5px 5px 0;
+    vertical-align: text-bottom;
+    margin-bottom: -4px;
+}
+
+
+.table-summary tbody div {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.table-summary td {
+    border-right: 1px solid #ccc;
+}
+
+.table-summary td:last-child {
+    border-right: none;
+}
+
+.table-summary td {
+    width: 17%;
+    padding: 5px;
+}
+
+.table-summary tfoot {
+    border-top: 1px solid #ccc;
+}
+
+.table-summary tfoot td {
+    vertical-align: top;
+}
+
+.table-summary tfoot td img{
+    padding:0 4px 0 5px;
+    margin-bottom:7px;
+    vertical-align:-9px;
+}

@@ -1,0 +1,211 @@
+/** Logo and Account Nav **/
+#header div {
+    width: 45%;
+    float: left;
+    padding: 7px 11px 7px 25px;
+}
+
+#header div + div {
+    float: right;
+    text-align: right;
+    padding: 0px 15px 0 0;
+    font-size: 1.1em;
+    height: 1.1em;
+    margin-top: -8px;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+#header span {
+    float: right;
+    display: block
+}
+
+#header a:hover {
+    text-decoration: none;
+}
+
+
+/* nav main item layout */
+#li-account {
+	width: 72px;
+	text-align: center;
+}
+
+#li-support {
+	width: 65px;
+	text-align: center;
+}
+
+#li-logout {
+	width: 48px;
+}
+
+/***************************
+ account-menu
+ ****************************/
+#account-menu {
+    margin: 15px 0 0 0;
+    z-index: 2000;
+    display: block;
+}
+
+#account-menu > li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 2000;
+}
+
+#account-menu li {
+    padding: 3px 5px 0 7px;
+    border: 1px solid #fff;
+    border-left: 1px dotted #5b5959;
+}
+
+#account-menu li:first-child {
+    border: none;
+    padding-top: 4px;
+}
+
+
+
+#accountDiv a:hover {
+    color: #fff;
+    border-bottom: 1px solid #3078ae;
+}
+
+#date {
+    padding: 7px 7px 0px 0;
+    text-align: right;
+}
+
+/** Primary Nav and Rollovers **/
+#nav {
+    width: 100%;
+    background-color: #3078ae;
+    height: 29px;
+    display: block;
+    margin: 0;
+    z-index: 1000;
+    position: relative;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    min-width: 960px;
+}
+
+#nav > li {
+    height: 100%;
+    float: left;
+    position: relative;
+    list-style: none;
+    color: #fff;
+    font-size: 1.5em;
+    border-right: 1px solid #fff;
+    font-weight: bold;
+}
+
+#nav > li:first-child {
+    border-left: 1px solid #fff;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    outline: none;
+    cursor: pointer;
+    padding: 4px 25px 0;
+    display: block;
+    height: 24px;
+    text-shadow: 1px 1px 1px #343434;
+}
+
+#nav .firstChild {
+    margin-left: 111px;
+}
+
+#nav > li > a:hover {
+    background: #1d659b;
+    border-bottom: none;
+}
+
+/** Secondary Nav Rollovers **/
+#nav div {
+    display: none;
+    margin: 8px 0 0 -1em;
+    padding: 0px;
+    background-color: #fff;
+    font-size: .75em;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    position: absolute;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 3px 3px 4px #999;
+    -webkit-box-shadow: 3px 3px 4px #999;
+    box-shadow: 3px 3px 4px #999;
+}
+
+#nav > li > div > ul {
+    display: block;
+    float: left;
+    margin: 7px 20px;
+}
+
+#nav > li > div > ul > li {
+    padding: 7px 0;
+}
+
+#nav > li > div > img {
+    display: block;
+    margin: -7px auto 0;
+}
+
+.pulldown {
+    padding-left: 4px;
+}
+
+/**********************
+ Footer
+ **********************/
+#footer {
+    width: 300px;
+    font-size: .95em;
+    margin: 17px auto 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-align: center;
+    color: #acacac;
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+    list-style: none;
+    width: 375px
+}
+
+#footer a {
+    white-space: nowrap;
+}
+
+#footer li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#footer li {
+    border-left: 1px dotted #949191;
+    padding: 0 5px 0 7px;
+}
+
+#footer li:first-child {
+    border: none;
+}
+
